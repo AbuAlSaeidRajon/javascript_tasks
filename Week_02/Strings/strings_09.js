@@ -6,3 +6,12 @@ Print both results using console.log().
 Example output:
 "First character: J"
 "Last character: t" */
+
+let word = "JavaScript";
+
+let firstCharacter = word[0];
+
+let lastCharacter = word[word.length - 1];
+
+console.log(`First character: ${firstCharacter}`);
+console.log(`Last character: ${lastCharacter}`);
