@@ -4,3 +4,8 @@ Print the extracted word using console.log().
 Example output:
 "Extracted word: JavaScript" */
 
+let sentence = "Learning Javascript is fun!";
+
+let extractedWord = sentence.substring(9, 20);
+
+console.log(`Extracted word: ${extractedWord}`);
