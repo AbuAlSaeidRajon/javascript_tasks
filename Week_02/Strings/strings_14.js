@@ -9,3 +9,16 @@ Example output:
 "Final description: javascript is fun and amazing!"
 "Does it include 'fun'? true"
  */
+
+let description = " JavaScript is Fun and powerful! ";
+
+description = description.trim();
+
+description = description.toLowerCase();
+
+let includesFun = description.includes("fun");
+
+description = description.replace("powerful", "amazing");
+
+console.log(`Final description: ${description}`);
+console.log(`Does it include 'fun'? ${includesFun}`);
