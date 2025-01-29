@@ -4,3 +4,9 @@ Print the cleaned-up string using console.log().
 Example output:
 "Cleaned string: Clean me up!"
  */
+
+let messyString = " Clean me up! ";
+
+let cleanedString = messyString.trim();
+
+console.log(`Cleaned string: ${cleanedString}`);
