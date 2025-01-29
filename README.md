@@ -4,7 +4,7 @@
     - [x] operators
     - [x] variables
 - **week_02:**
-    - [ ] basic_functions
+    - [x] basic_functions
     - [x] numbers
     - [ ] strings
     - [ ] conditions
