@@ -6,7 +6,7 @@
 - **week_02:**
     - [x] basic_functions
     - [x] numbers
-    - [ ] strings
+    - [x] strings
     - [ ] conditions
 - **week_03:**
     - [x] github
