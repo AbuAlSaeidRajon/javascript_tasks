@@ -5,3 +5,14 @@ If hasFox is true, return "You have a fox as a pet!"
 Otherwise, return "No fox detected!"
 Call the function with true and false and print the result. 
 */
+
+function checkForFox(hasFox) {
+    if (hasFox) {
+        return "You have a fox as a pet!";
+    } else {
+        return "No fox detected!"
+    }
+}
+
+console.log(checkForFox(true));
+console.log(checkForFox(false));
