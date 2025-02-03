@@ -7,3 +7,18 @@ For any other score, return "Grade C".
 Call the function with scores like 85 and 75 and print the result. 
 */
 
+function getGrade(score) {
+    if (score >= 90) {
+        return "Grade A";
+    } else if (score >= 80 && score <= 89) {
+        return "Grade B";
+    } else {
+        return "Grade C"
+    }
+}
+
+console.log(getGrade(85)); // Should print: "Grade B"
+console.log(getGrade(75)); // Should print: "Grade C"
+console.log(getGrade(90)); // Should print: "Grade A"
+console.log(getGrade(95)); // Should print: "Grade A"
+console.log(getGrade(82)); // Should print: "Grade B"
