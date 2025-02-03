@@ -12,3 +12,5 @@
     - [x] github
     - [ ] loops
     - [ ] 8_ball
+- **week_03:**
+    - [ ] Basic_DOM
