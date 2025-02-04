@@ -5,3 +5,18 @@ Return true if the number is even, or false if it’s odd.
 Call the function with numbers like 4 and 7, and print "The number is even!" or "The number is odd!" based on the result. 
 */
 
+function isEven(number) {
+    return number % 2 === 0;
+} 
+
+// Call the function with numbers like 4 and 7, and print the result
+function printEvenOrOdd(number) {
+    if (isEven(number)) {
+        console.log("The number is even!");
+    } else {
+        console.log("The number is odd!");
+    }
+}
+
+printEvenOrOdd(4);
+printEvenOrOdd(7);
