@@ -7,6 +7,7 @@ Call the function with numbers like 4 and 7, and print "The number is even!" or 
 
 function isEven(number) {
     return number % 2 === 0;
+    // A remainder of 0 indicates an even number, while 1 indicates an odd number.
 } 
 
 // Call the function with numbers like 4 and 7, and print the result
