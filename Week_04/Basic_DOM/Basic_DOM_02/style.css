@@ -1,0 +1,59 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Styling for the Heading */
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Styling for the List */
+  ul#fruitList {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+  
+  ul#fruitList li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  /* Styling for the Input Field */
+  input#fruitInput {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Styling for the Button */
+  button#addFruitBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button#addFruitBtn:hover {
+    background-color: #0056b3;
+  }
