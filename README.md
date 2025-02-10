@@ -14,3 +14,4 @@
     - [ ] 8_ball
 - **week_03:**
     - [x] Basic_DOM
+    - [x] Pancake Maker
