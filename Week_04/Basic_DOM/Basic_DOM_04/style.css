@@ -1,0 +1,39 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Styling for the Paragraph */
+  p#toggleParagraph {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Styling for the Button */
+  button#toggleButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button#toggleButton:hover {
+    background-color: #0056b3;
+  }
