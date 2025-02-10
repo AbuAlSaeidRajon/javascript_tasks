@@ -12,6 +12,6 @@
     - [x] github
     - [ ] loops
     - [ ] 8_ball
-- **week_03:**
+- **week_04:**
     - [x] Basic_DOM
     - [x] Pancake Maker
