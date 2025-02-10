@@ -1,0 +1,39 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Button Styling */
+  button#clickButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  button#clickButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Counter Styling */
+  p {
+    font-size: 1.2rem;
+    color: #333;
+  }
