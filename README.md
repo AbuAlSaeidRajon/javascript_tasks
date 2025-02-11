@@ -15,3 +15,4 @@
 - **week_04:**
     - [x] Basic_DOM
     - [x] Pancake Maker
+    - [x] ATM_Simulator
