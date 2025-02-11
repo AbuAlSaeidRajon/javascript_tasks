@@ -1,18 +1,18 @@
 ## Completed Tasks
-- **week_01**
+- **Week_01**
     - [x] data_types
     - [x] operators
     - [x] variables
-- **week_02:**
+- **Week_02:**
     - [x] basic_functions
     - [x] numbers
     - [x] strings
     - [ ] conditions
-- **week_03:**
+- **Week_03:**
     - [x] github
     - [ ] loops
     - [ ] 8_ball
-- **week_04:**
+- **Week_04:**
     - [x] Basic_DOM
     - [x] Pancake Maker
     - [x] ATM_Simulator
