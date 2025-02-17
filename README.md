@@ -16,3 +16,4 @@
     - [x] Basic_DOM
     - [x] Pancake Maker
     - [x] ATM_Simulator
+    - [x] Pancake Maker 2
