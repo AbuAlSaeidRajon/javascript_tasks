@@ -18,5 +18,5 @@
     - [x] ATM_Simulator
 
 - **Week_05:**
-    - [ ] Array
+    - [x] Array
     - [x] Pancake Maker 2
