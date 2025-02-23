@@ -62,3 +62,45 @@ if (indexOfMike !== -1) {
 }
 
 // 10. Concatenate "Bob" to the array and create a new array, keeping the original array unchanged.
+let newArrayWithBob = teamMembers.concat("Bob");
+console.log("\nNew array with 'Bob' concatenated:", newArrayWithBob);
+console.log("Original array remains unchanged:", teamMembers);
+
+// 11. Copy the entire `teamMembers` array using `slice` and store it in a new variable.
+let teamMembersCopy = teamMembers.slice();
+console.log("\nCopy of the original array:", teamMembersCopy);
+
+// 12. Create a `newMembers` array with `"Tina"` and `"Dean"`, then merge it with `teamMembers` into a new array.
+let newMembers = ["Tina", "Dean"];
+let mergedArray = teamMembers.concat(newMembers);
+console.log("\nMerged array with `newMembers`:", mergedArray);
+
+// 13. Find all occurrences of "John" in the array and store their positions in a new array.
+let johnPositions = [];
+teamMembers.forEach((member, index) => {
+    if (member === "John") {
+        johnPositions.push(index);
+    }
+});
+console.log("\nPositions of 'John' in the array:", johnPositions);
+
+// 14. Transform all names in the array to be uppercase while keeping the original array unchanged.
+let upperCaseNames = teamMembers.map(member => member.toUpperCase());
+console.log("\nArray with names in uppercase:", upperCaseNames);
+console.log("Original array remains unchanged:", teamMembers);
+
+// 15. Sort `teamMembers` in alphabetical order.
+teamMembers.sort();
+console.log("\nSorted array in alphabetical order:", teamMembers);
+
+// 16. Reverse the `teamMembers` array.
+teamMembers.reverse();
+console.log("\nReversed array:", teamMembers);
+
+// 17. Check if at least one member in the array is named "John".
+let hasJohn = teamMembers.includes("John");
+console.log("\nAt least one member named 'John':", hasJohn);
+
+// 18. Check if all names in the array have more than three letters.
+let allNamesMoreThanThreeLetters = teamMembers.every(member => member.length > 3);
+console.log("All names have more than three letters:", allNamesMoreThanThreeLetters);
