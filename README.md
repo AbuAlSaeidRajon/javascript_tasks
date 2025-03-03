@@ -20,3 +20,7 @@
 - **Week_05:**
     - [x] Array
     - [x] Pancake Maker 2
+
+- **Week_06:**
+    - [ ] Objects
+    - [x] Little_Zoo
