@@ -7,3 +7,10 @@ Use a ternary operator to return:
 Call the function with different values for isRaining. 
 */
 
+function rainAdvice(isRaining) {
+    return isRaining ? "Stay indoors" : "Enjoy the outdoors!";
+}
+
+// Examples of calling the function with different values for isRaining
+console.log(rainAdvice(true));  // Stay indoors
+console.log(rainAdvice(false)); // Enjoy the outdoors!

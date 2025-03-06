@@ -9,3 +9,22 @@ For any other animal, return "All animals are awesome!"
 Call the function with different animal names. 
 */
 
+function getAnimalDescription(favoriteAnimal) {
+    switch (favoriteAnimal) {
+        case 'fox':
+            return 'Foxes are sly and smart!';
+        case 'dog':
+            return 'Dogs are loyal friends.';
+        case 'cat':
+            return 'Cats are curious and independent.';
+        default:
+            return 'All animals are awesome!';
+    }
+}
+
+// Examples of calling the function with different animal names
+console.log(getAnimalDescription('fox')); // Foxes are sly and smart!
+console.log(getAnimalDescription('dog')); // Dogs are loyal friends.
+console.log(getAnimalDescription('cat')); // Cats are curious and independent.
+console.log(getAnimalDescription('elephant')); // All animals are awesome!
+console.log(getAnimalDescription('lion')); // All animals are awesome!
