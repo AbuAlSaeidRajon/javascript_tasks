@@ -1,0 +1,67 @@
+/* General Page Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  ul#ordersList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul#ordersList li {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  ul#ordersList li p {
+    margin: 5px 0;
+  }
+  
+  .statusSelect {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Order Status Styles */
+  .waiting {
+    border-left: 5px solid #ffc107;
+  }
+  
+  .ready {
+    border-left: 5px solid #17a2b8;
+  }
+  
+  .delivered {
+    border-left: 5px solid #28a745;
+  }
