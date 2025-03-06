@@ -8,3 +8,12 @@ Write a function named createWordPyramid:
     cod
     code
  */
+
+    function createWordPyramid(word) {
+        for (let i = 1; i <= word.length; i++) {
+            console.log(word.substring(0, i));
+        }
+    }
+    
+    // Call the function with a word to see the pyramid pattern
+    createWordPyramid("code");    

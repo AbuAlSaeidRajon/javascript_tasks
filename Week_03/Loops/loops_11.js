@@ -12,3 +12,12 @@ Example for 5:
 ...
 5 x 10 = 50
  */
+
+function generateMultiplicationTable(number) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${number} x ${i} = ${number * i}`);
+    }
+}
+
+// Call the function with a number to see the multiplication table
+generateMultiplicationTable(5);
