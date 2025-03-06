@@ -7,7 +7,7 @@
     - [x] basic_functions
     - [x] numbers
     - [x] strings
-    - [ ] conditions
+    - [x] conditions
 - **Week_03:**
     - [x] github
     - [ ] loops
