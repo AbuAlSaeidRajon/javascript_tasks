@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>All Orders</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="all-orders.css">
   <script src="all-orders.js" defer></script>
 </head>
 <body>
   <div class="container">
     <h1>All Orders</h1>
-    <div class="orders-list-container">
-      <ul id="ordersList"></ul>
+    <div class="orders-section">
+      <h2>Waiting Orders</h2>
+      <div class="orders-list-container">
+        <ul id="waitingOrdersList"></ul>
+      </div>
+    </div>
+    <div class="orders-section">
+      <h2>Ready Orders</h2>
+      <div class="orders-list-container">
+        <ul id="readyOrdersList"></ul>
+      </div>
+    </div>
+    <div class="orders-section">
+      <h2>Delivered Orders</h2>
+      <div class="orders-list-container">
+        <ul id="deliveredOrdersList"></ul>
+      </div>
     </div>
   </div>
 </body>
