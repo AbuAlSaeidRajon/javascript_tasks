@@ -34,3 +34,7 @@
     - [x] error_handling
     - [x] js_writing_practices
     - [x] fault_finding
+
+- **Week_09:**
+    - [x] destructuring
+    - [x] spread_rest
