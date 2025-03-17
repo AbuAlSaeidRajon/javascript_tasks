@@ -31,6 +31,6 @@
     - [x] Pancake_Maker_3
 
 - **Week_08:**
-    - [ ] error_handling
-    - [ ] js_writing_practices
-    - [ ] fault_finding
+    - [x] error_handling
+    - [x] js_writing_practices
+    - [x] fault_finding
