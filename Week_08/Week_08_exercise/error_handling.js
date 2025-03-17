@@ -10,7 +10,11 @@ task1(); // Should log: "Error caught: function is not defined"
 */
 
 function task1() {
-    // Your code here
+    try {
+        undefinedFunction();
+    } catch (error) {
+        console.log(`Error caught: ${error.message}`);
+    }
 }
 
 /* Task 2: Handle ReferenceError
@@ -23,7 +27,13 @@ task2(); // Should log: "ReferenceError caught: myVariable is not defined"
 */
 
 function task2() {
-    // Your code here
+    try {
+        console.log(myVariable);
+    } catch (error) {
+        if (error instanceof ReferenceError) {
+            console.log(`ReferenceError caught: ${error.message}`);
+        }
+    }
 }
 
 /* Task 3: Using Finally
@@ -35,7 +45,13 @@ task3(); // Should log an error message and "Task completed."
 */
 
 function task3() {
-    // Your code here
+    try {
+        throw new Error("Simulated error");
+    } catch (error) {
+        console.log(`Error: ${error.message}`);
+    } finally {
+        console.log("Task completed.");
+    }
 }
 
 /* Task 4: Fix JSON Parsing Error
@@ -48,7 +64,12 @@ parseJSON("Invalid JSON text"); // Should log an error and return null
 */
 
 function parseJSON(jsonString) {
-    // Your code here
+    try {
+        return JSON.parse(jsonString);
+    } catch (error) {
+        console.log("Invalid JSON format");
+        return null;
+    }
 }
 
 /* Task 5: Throwing a Custom Error
@@ -61,7 +82,15 @@ checkAge(16); // Should log: "Error: You must be at least 18."
 */
 
 function checkAge(age) {
-    // Your code here
+    try {
+        if (age < 18) {
+            throw new Error("You must be at least 18.");
+        } else {
+            console.log("Access granted.");
+        }
+    } catch (error) {
+        console.log(`Error: ${error.message}`);
+    }
 }
 
 /* Task 6: Save and Retrieve from LocalStorage
@@ -77,11 +106,17 @@ console.log(getUser()); // Should log an error and return null
 */
 
 function saveUser(user) {
-    // Your code here
+    localStorage.setItem("user", JSON.stringify(user));
 }
 
 function getUser() {
-    // Your code here
+    try {
+        const user = JSON.parse(localStorage.getItem("user"));
+        return user;
+    } catch (error) {
+        console.log("Error retrieving user: Invalid JSON format");
+        return null;
+    }
 }
 
 /* Task 7: Check if Object Property Exists
@@ -94,7 +129,11 @@ checkProperty({ name: "Bob", age: 30 }, "email"); // Should log "Property not fo
 */
 
 function checkProperty(obj, key) {
-    // Your code here
+    if (obj.hasOwnProperty(key)) {
+        console.log(obj[key]);
+    } else {
+        console.log("Property not found");
+    }
 }
 
 /* Task 8: Fetch API Error Handling
@@ -107,7 +146,16 @@ fetchData("invalid-url"); // Should log network error
 */
 
 async function fetchData(url) {
-    // Your code here
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log(`Fetch error: ${error.message}`);
+    }
 }
 
 /* Task 9: Fix a URI Error
@@ -120,7 +168,14 @@ task9("%"); // Should log URIError
 */
 
 function task9(malformedURI) {
-    // Your code here
+    try {
+        const decodedURI = decodeURIComponent(malformedURI);
+        console.log(decodedURI);
+    } catch (error) {
+        if (error instanceof URIError) {
+            console.log(`URIError: ${error.message}`);
+        }
+    }
 }
 
 /* Task 10: Clear LocalStorage
@@ -132,5 +187,6 @@ clearStorage(); // Should log "LocalStorage cleared."
 */
 
 function clearStorage() {
-    // Your code here
+    localStorage.clear();
+    console.log("LocalStorage cleared.");
 }
