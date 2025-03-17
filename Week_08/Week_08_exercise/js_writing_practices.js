@@ -9,10 +9,9 @@ task1(); // Logs: "Strict mode error: variable is not defined"
 */
 
 function task1() {
-    // Code here
     "use strict";
     try {
-        undeclaredVar = 10; // this will cause an error
+        undeclaredVar = 10; // This will cause an error
     } catch (error) {
         console.log(`Strict mode error: ${error.message}`);
     }
@@ -29,7 +28,17 @@ Expected:
 */
 
 function task2() {
-    // Code here
+    const MAX_USERS = 100;
+    let currentUsers = 10;
+
+    try {
+        MAX_USERS = 150; // This will cause an error
+    } catch (error) {
+        console.log(`Error: ${error.message}`);
+    }
+
+    console.log(`MAX_USERS: ${MAX_USERS}`); // Should still be 100
+    console.log(`currentUsers: ${currentUsers}`);
 }
 
 /* Task 3: Create and Log an Object
@@ -45,7 +54,12 @@ Expected:
 */
 
 function task3() {
-    // Code here
+    const userProfile = {
+        name: "Alice",
+        email: "alice@example.com",
+        isAdmin: true
+    };
+    console.log(userProfile);
 }
 
 /* Task 4: Write a Simple Function
@@ -58,7 +72,7 @@ calculateArea(5, 10) → 50
 */
 
 function calculateArea(width, height) {
-    // Code here
+    return width * height;
 }
 
 /* Task 5: Avoid Magic Numbers
@@ -72,7 +86,7 @@ applyDiscount(100) → 90
 
 const DISCOUNT = 0.1;
 function applyDiscount(price) {
-    // Code here
+    return price - (price * DISCOUNT);
 }
 
 /* Task 6: Write Useful Comments
@@ -84,8 +98,13 @@ Example:
 greetUser("Bob") → "Hello, Bob!"
 */
 
+/**
+ * Returns a greeting message for the user.
+ * @param {string} name - The name of the user.
+ * @return {string} - A greeting message.
+ */
 function greetUser(name) {
-    // Code here
+    return `Hello, ${name}!`;
 }
 
 /* Task 7: Refactor Unclear Code
@@ -99,8 +118,8 @@ After:
 - Use better naming and proper formatting.
 */
 
-function checkNumber(n) {
-    // Code here
+function checkNumber(number) {
+    return number < 0 ? 'negative' : 'positive';
 }
 
 /* Task 8: Fix Formatting
