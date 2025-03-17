@@ -1,11 +1,3 @@
-/* 
-- Each function is broken—it does not return the expected result.
-- Use console.log(), breakpoints, and careful analysis to debug.
-- Test each function using the provided test cases.
-- Fix the errors and validate the expected output.
-*/
-
-
 'use strict';
 
 /* Task 1: Fix the Greeting Function  
@@ -14,7 +6,10 @@ If no name is provided, return "Hello, guest!".
 */
 
 function greet(name) {
-    return "Hello " + Name;
+    if (!name) {
+        name = "guest";
+    }
+    return "Hello, " + name + "!";
 }
 
 // Debug & Test
@@ -26,8 +21,8 @@ Should multiply `price` by `quantity`.
 If `quantity` is missing, default to `1`.  
 */
 
-function calculatePrice(price, quantity) {
-    return price + quantity;
+function calculatePrice(price, quantity = 1) {
+    return price * quantity;
 }
 
 // Debug & Test
@@ -39,7 +34,7 @@ Should return `true` if number is even, otherwise `false`.
 */
 
 function isEven(num) {
-    return num % 2 = 0;
+    return num % 2 === 0;
 }
 
 // Debug & Test
@@ -51,7 +46,7 @@ Should log numbers from 1 to 5.
 */
 
 function countToFive() {
-    for (let i = 1; i <= 5; i--) {
+    for (let i = 1; i <= 5; i++) {
         console.log(i);
     }
 }
@@ -64,7 +59,7 @@ Should return the last item of the array.
 */
 
 function getLastItem(arr) {
-    return arr[arr.length + 1];
+    return arr[arr.length - 1];
 }
 
 // Debug & Test
@@ -76,7 +71,12 @@ Should parse a JSON string into an object.
 */
 
 function parseJson(jsonString) {
-    return JSON.stringify(jsonString);
+    try {
+        return JSON.parse(jsonString);
+    } catch (error) {
+        console.log("Error parsing JSON:", error.message);
+        return null;
+    }
 }
 
 // Debug & Test
@@ -88,7 +88,7 @@ Should return the user’s email from an object.
 */
 
 function getEmail(user) {
-    return user.mail;
+    return user.email;
 }
 
 // Debug & Test
@@ -99,15 +99,15 @@ Should return the square of a number after doubling it.
 */
 
 function double(num) {
-    return num + num;
-}
-
-function square(num) {
     return num * 2;
 }
 
+function square(num) {
+    return num * num;
+}
+
 function processNumber(num) {
-    return double(square(num));
+    return square(double(num));
 }
 
 // Debug & Test
@@ -119,7 +119,7 @@ Should return an array of numbers sorted in ascending order.
 */
 
 function sortNumbers(arr) {
-    return arr.sort((a, b) => b - a);
+    return arr.sort((a, b) => a - b);
 }
 
 // Debug & Test
@@ -136,7 +136,7 @@ const users = [
 ];
 
 function getFullNames(users) {
-    return users.map(user => user.firstName + " " + user.LastName);
+    return users.map(user => user.firstName + " " + user.lastName);
 }
 
 // Debug & Test
@@ -154,7 +154,7 @@ const userData = {
 };
 
 function getUserNames(data) {
-    return data.user.map(user => user.name);
+    return data.users.map(user => user.name);
 }
 
 // Debug & Test
@@ -171,7 +171,7 @@ const products = [
 ];
 
 function filterProducts(products, maxPrice) {
-    return products.filter(product => product.price < maxPrice);
+    return products.filter(product => product.price < maxPrice).map(product => product.name);
 }
 
 // Debug & Test
@@ -182,11 +182,11 @@ Should save a user object to LocalStorage and retrieve it.
 */
 
 function saveUser(user) {
-    localStorage.setItem("user", user);
+    localStorage.setItem("user", JSON.stringify(user));
 }
 
 function getUser() {
-    return localStorage.getItem("user");
+    return JSON.parse(localStorage.getItem("user"));
 }
 
 // Debug & Test
@@ -199,7 +199,7 @@ Should return an array of squared numbers.
 
 function squareNumbers(arr) {
     let squaredArr = [];
-    for (let i = 0; i <= arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         squaredArr.push(arr[i] * arr[i]);
     }
     return squaredArr;
@@ -219,11 +219,7 @@ const students = [
 ];
 
 function getTopStudents(studentList) {
-    return studentList.map(student => {
-        if (student.score > 80) {
-            return student.name;
-        }
-    });
+    return studentList.filter(student => student.score > 80).map(student => student.name);
 }
 
 // Debug & Test
