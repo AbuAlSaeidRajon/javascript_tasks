@@ -22,7 +22,7 @@
     - [x] Pancake Maker 2
 
 - **Week_06:**
-    - [ ] Objects
+    - [x] Objects
     - [x] Little_Zoo
 
 - **Week_07:**
