@@ -26,7 +26,7 @@
     - [x] Little_Zoo
 
 - **Week_07:**
-    - [ ] JSON
+    - [x] JSON
     - [ ] Local_Storage
     - [x] Pancake_Maker_3
 
