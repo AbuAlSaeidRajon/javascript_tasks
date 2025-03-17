@@ -27,7 +27,7 @@
 
 - **Week_07:**
     - [x] JSON
-    - [ ] Local_Storage
+    - [x] Local_Storage
     - [x] Pancake_Maker_3
 
 - **Week_08:**
