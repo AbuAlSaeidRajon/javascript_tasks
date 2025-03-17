@@ -7,7 +7,7 @@ Fix the function to correctly clone `fruits`.
 const fruits = ["apple", "banana", "orange"];
 
 // Fix this
-const newFruits = fruits;
+const newFruits = [...fruits];
 newFruits.push("grape");
 
 console.log(fruits); // Expected: ["apple", "banana", "orange"]
@@ -20,7 +20,7 @@ const oldTasks = ["task1", "task2"];
 const newTasks = ["task3", "task4"];
 
 // Fix this
-const allTasks = oldTasks + newTasks;
+const allTasks = [...oldTasks, ...newTasks];
 
 console.log(allTasks); // Expected: ["task1", "task2", "task3", "task4"]
 
@@ -32,7 +32,7 @@ const defaultSettings = { theme: "light", fontSize: 14 };
 const userSettings = { theme: "dark" };
 
 // Fix this
-const finalSettings = { defaultSettings, userSettings };
+const finalSettings = { ...defaultSettings, ...userSettings };
 
 console.log(finalSettings); // Expected: { theme: "dark", fontSize: 14 }
 
@@ -40,8 +40,8 @@ console.log(finalSettings); // Expected: { theme: "dark", fontSize: 14 }
 Make the function work for any number of numbers.  
 */
 
-function sumNumbers(a, b) {
-    return a + b;
+function sumNumbers(...numbers) {
+    return numbers.reduce((sum, num) => sum + num, 0);
 }
 
 console.log(sumNumbers(2, 3, 4)); // Expected: 9
@@ -53,7 +53,7 @@ Extract `title` and collect the remaining properties into `extraInfo`.
 const book = { title: "JavaScript Guide", pages: 400, author: "John Doe" };
 
 // Fix this
-const { title } = book;
+const { title, ...extraInfo } = book;
 console.log(title, extraInfo); // Expected: "JavaScript Guide", { pages: 400, author: "John Doe" }
 
 /* Task 6: Create Your Own
@@ -61,4 +61,9 @@ Write a function that receives multiple numbers and returns their average using 
 Test with: `average(10, 20, 30, 40)`. Expected output: `25`.
 */
 
-// Write your code here
+function average(...numbers) {
+    const total = numbers.reduce((sum, num) => sum + num, 0);
+    return total / numbers.length;
+}
+
+console.log(average(10, 20, 30, 40)); // Expected: 25
